@@ -7,6 +7,12 @@ This software supports a specific physical machine, a prototype robot which sort
 
 The machine sorted a column of button caps stacked in a tube, which had been sorted into the stack by another, entirely passive device. A magnetic end effector descended to the column, and upon detecting contact with a button would lift up the top button from the stack (the magnet being just strong enough to lift one article). The end effector carried the cap to a measuring platform, on which an infrared sensor reading would detect if the cap was top- or bottom- up. Once classified, a sweeping armature on the plate would sweep the button left into one chute if it were top-up, and right into another if bottom-up, then repeat the task.
 
+In this package are three components:
+
+- CPU-side control software, which coordinates the execution of the main tasks of collecting and placing buttons for sorting, intended through the prototype phase to later be part of a larger, integrated computer controlled system.
+- MCU-side firmware, which implements serial transmitted character action codes for individual behaviors (such as lowering the end effector, or activating the sweep armature) at the hardware level, monitoring limit switches, contact sensors, hall effect sensors, and actuating servos and motors, as well as implementing the control systems for executing said behaviors
+- A demonstration camera-based button classification system, which tests a series of fast classifiers based on a low resolution camera and LED lighting system, demonstrating the feasibility of using an imaging sensor on the highly reflective targets.
+
 The robot consisted of several parts:
 
 ![223a0b12-c117-4ae9-bbf8-e04dce6772bb](https://github.com/user-attachments/assets/6ffc5f51-95b8-4024-8eea-9976e0fa8e26)
